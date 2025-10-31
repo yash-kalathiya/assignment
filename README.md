@@ -69,10 +69,25 @@ Built a complete 2-layer neural network with:
 
 ## Running the Code
 
+### Setup
 ```bash
-# Make sure you have numpy and matplotlib installed
+# Install dependencies
+pip install numpy matplotlib
+# or use the requirements file
 pip install -r requirements.txt
+```
 
-# Run Task 2
+### Running Task 2
+```bash
+# Run the neural network implementation
 python task2.py
 ```
+
+This will train and test the neural network on:
+1. **XOR Problem** - 4 samples with full batch training
+2. **Regression Problem** - 400 samples using Stochastic Gradient Descent (SGD)
+
+The output shows:
+- Training progress with loss values
+- XOR predictions vs targets
+- Final regression loss
