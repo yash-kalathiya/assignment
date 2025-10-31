@@ -36,7 +36,6 @@ ENV/
 uv.lock
 *.png
 *.jpg
-*.pdf
 
 # OS specific
 Thumbs.db
