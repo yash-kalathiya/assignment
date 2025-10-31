@@ -71,26 +71,8 @@ Built a complete 2-layer neural network with:
 
 ```bash
 # Make sure you have numpy and matplotlib installed
-pip install numpy matplotlib
+pip install -r requirements.txt
 
 # Run Task 2
 python task2.py
 ```
-
-## Results
-
-**Task 2:** 
-- Solves XOR problem with near-perfect accuracy (< 0.0001 error)
-- Achieves good performance on regression tasks
-- Demonstrates stable training convergence
-
-## Implementation Notes
-
-I used standard neural network techniques like:
-- Proper weight initialization 
-- Matrix operations for efficiency
-- Tanh activation for hidden layers
-- Mean squared error loss function
-- Gradient descent optimization
-
-The implementation follows the assignment specifications closely while ensuring numerical stability and good performance.
