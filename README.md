@@ -325,10 +325,3 @@ Default: α = 0.01 (adjustable per task requirements)
 
 ---
 
-## 📝 License
-
-This project is part of an academic assignment.
-
----
-
-**Last Updated:** October 31, 2025
