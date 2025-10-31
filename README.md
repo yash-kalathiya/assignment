@@ -223,22 +223,26 @@ python task2.py
 
 ## 🔬 Experiments
 
-### Experiment 1: XOR Classification
+### Experiment 1: Circular Region Classification
 
-**Problem:** Learn the XOR logic function (non-linearly separable)
+**Problem:** Learn to classify points based on their position relative to a circular boundary (non-linearly separable)
 
 **Dataset:**
-- 4 training samples
-- Binary inputs {0, 1}²
-- Binary targets {0, 1}
+- 100 training samples
+- 2D points uniformly distributed in [0,1] × [0,1]
+- Points within radius 0.35 of center (0.5, 0.5) → class 1
+- Points outside the circle → class 0
 
 **Configuration:**
-- Hidden neurons: 4
+- Hidden neurons: 8
 - Learning rate: 0.1
-- Training epochs: 2000
+- Training epochs: 1500
 - Optimization: Full-batch gradient descent
 
-**Output:** Displays input-output mappings with predictions
+**Output:** 
+- Displays test point classifications with distances from center
+- Training accuracy metric
+- Demonstrates network's ability to learn circular decision boundaries
 
 ### Experiment 2: Nonlinear Regression
 
@@ -260,13 +264,17 @@ python task2.py
 
 ## 📈 Expected Results
 
-**XOR Classification:**
+**Circular Region Classification:**
 ```
-Input           Expected        Predicted      
-[0 0]          0               ~0.0012
-[0 1]          1               ~0.9987
-[1 0]          1               ~0.9991
-[1 1]          0               ~0.0008
+Point (x, y)         Distance        Expected        Predicted      
+(0.50, 0.50)         0.0000          1               ~0.75
+(0.30, 0.50)         0.2000          1               ~0.67
+(0.10, 0.10)         0.5657          0               ~0.44
+(0.90, 0.90)         0.5657          0               ~0.30
+(0.50, 0.70)         0.2000          1               ~0.78
+(0.20, 0.20)         0.4243          0               ~0.59
+
+Training Accuracy: ~79% (varies with random initialization)
 ```
 
 **Regression:**
