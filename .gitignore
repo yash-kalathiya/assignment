@@ -34,7 +34,6 @@ ENV/
 
 # Project specific
 uv.lock
-*.png
 *.jpg
 
 # OS specific
